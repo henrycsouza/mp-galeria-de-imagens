@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meu Portfólio de Fotografia</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <aside id="sidebar">
+    <div class="logo">
+      <h2>Galeria de<br>Imagens</h2>
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#fotos" class="nav-link">Fotos</a></li>
+        <li><a href="#bio" class="nav-link">Bio</a></li>
+        <li><a href="#contato" class="nav-link">Contato</a></li>
+      </ul>
+    </nav>
+
+    <footer class="social">
+      <a href="#">F</a>
+      <a href="#">T</a>
+      <a href="#">W</a>
+    </footer>
+  </aside>
+
+  <main id="content">
+
+    <section id="home" class="section active bg-image">
+      <div class="overlay-content">
+        <h1>Boas vindas ao meu portfólio</h1>
+        <button onclick="irParaSeção('fotos')">ver mais ></button>
+      </div>
+    </section>
+
+    <section id="fotos" class="section">
+      <h2 class="section-title">Minhas Fotos</h2>
+      <div class="galeria" id="galeria">
+        <img src="https://picsum.photos/400/400?random=1" class="foto-item" onclick="abrirModal(this.src)">
+        <img src="https://picsum.photos/400/400?random=2" class="foto-item" onclick="abrirModal(this.src)">
+        <img src="https://picsum.photos/400/400?random=3" class="foto-item" onclick="abrirModal(this.src)">
+        <img src="https://picsum.photos/400/400?random=4" class="foto-item" onclick="abrirModal(this.src)">
+      </div>
+      <div class="btn-container">
+        <button id="btnCarregar" onclick="carregarMais()">Ver mais</button>
+      </div>
+    </section>
+
+    <section id="bio" class="section bg-image">
+      <div class="overlay-content">
+        <h2>Sobre Mim</h2>
+        <p>Lorem ipsum dolor sit amet consectetur. Ac cras ullamcorper turpis bibendum mauris iaculis et vulputate. Cras dignissim at amet elementum at. Eu est amet nec orci at. Nisi diam scelerisque dictumst nisi congue.</p>
+        <button onclick="irParaSeção('fotos')">Ver Fotos</button>
+      </div>
+    </section>
+
+    <section id="contato" class="section bg-image">
+      <div class="overlay-content">
+        <h2>Contato</h2>
+        <p>Email: contato@galeria.com</p>
+        <p>Tel: (11) 1234-5678</p>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="modal" class="modal" onclick="fecharModal()">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="imgModal">
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
